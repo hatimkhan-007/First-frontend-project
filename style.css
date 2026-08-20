@@ -2,10 +2,76 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:poppins;
 }
 
 .header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 30px 40px;
+}
+
+.logo-div{
+    gap: 10px;
+    display: flex;
+}
+
+.logo-div img{
+    object-fit: cover;
+    width: auto;
+    height: auto;
+}
+
+.web-name{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.h-nav{
+    color: black;
+}
+
+.h-nav a{
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    color: black;
+    font-size: 16px;
+    margin-right: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.h-nav a:hover{
+    color: #21231eaf;
+    transform: translateY(-2px);
+}
+
+.h-nav a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.h-nav a:hover::after {
+    width: 100%;
+}
+
+.h-icons{
+    display: flex;
+    gap: 20px;
+}
+
+.h-icons svg{
+    transition: transform 0.3s ease;
+}
+
+.h-icons svg:hover{
+    transform: scale(1.2);
+    cursor: pointer;
 }
