@@ -13,18 +13,18 @@
 }
 
 .logo-div{
-    gap: 10px;
     display: flex;
 }
 
 .logo-div img{
     object-fit: cover;
-    width: auto;
+    width: 90px;
     height: auto;
 }
 
 .web-name{
-    font-size: 25px;
+    padding-top: 14px;
+    font-size: 20px;
     font-weight: 500;
 }
 
@@ -74,4 +74,93 @@
 .h-icons svg:hover{
     transform: scale(1.2);
     cursor: pointer;
+}
+
+.hero-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: center;
+}
+
+.sec-1 {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.sec1-div{
+    margin: 0 40px;
+    position: relative;
+}
+
+.btn-new-arr {
+    color: #ff8b06;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.main-theme{
+    margin-top: 20px;
+    display: flex;
+    line-height: 1.4;
+    flex-direction: column;
+}
+
+.main-theme p{
+    font-size: 58px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.main-dis{
+    margin-top: 20px;
+    opacity: 0.6;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+}
+
+.btn-container{
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.btn-shop{
+    padding: 8px 22px 8px 22px;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-shop:hover{
+    background-color: #000000a0;
+    transform: scale(1.1);
+}
+
+.btn-explore{
+    padding: 8px 22px 8px 22px;
+    background-color: transparent;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn-explore:hover{
+    transform: scale(1.1);
+}
+
+.sec-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec-2 img{
+    width: 100%;
+    height: auto;
 }
