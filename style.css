@@ -1,8 +1,16 @@
+.root{
+    --primary-color: #ff8b06;
+    --secondary-color: #000000;
+    --font-size: 16px;
+    --font-weight: 400;
+}
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:poppins;
+    font-family: poppins;
 }
 
 .header{
@@ -29,14 +37,14 @@
 }
 
 .h-nav{
-    color: black;
+    color: var(--secondary-color);
 }
 
 .h-nav a{
     text-decoration: none;
     position: relative;
     display: inline-block;
-    color: black;
+    color: var(--secondary-color);
     font-size: 16px;
     margin-right: 20px;
     transition: color 0.3s ease, transform 0.3s ease;
@@ -54,7 +62,7 @@
     width: 0;
     height: 2px;
     bottom: -4px;
-    background-color: black;
+    background-color: var(--secondary-color);
     transition: width 0.3s ease;
 }
 
@@ -76,6 +84,69 @@
     cursor: pointer;
 }
 
+.hamburger{
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+@media (max-width: 820px) {
+
+    .header {
+        flex-direction: row;
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+        background: transparent;
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .h-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        width: 200px;
+        background-color: #fff;
+        padding: 20px;
+    }
+
+    .h-nav.active {
+        display: flex;
+    }
+
+    .h-icons {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .header {
+        padding: 20px;
+    }
+
+    .logo-div img {
+        width: 70px;
+    }
+
+    .web-name {
+        font-size: 18px;
+    }
+
+    .h-nav a {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+}
+
 .hero-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -95,7 +166,7 @@
 }
 
 .btn-new-arr {
-    color: #ff8b06;
+    color: var(--primary-color);
     font-weight: 500;
     font-size: 18px;
 }
@@ -128,7 +199,7 @@
 
 .btn-shop{
     padding: 8px 22px 8px 22px;
-    background-color: #000000;
+    background-color: #000;
     color: #fff;
     border-radius: 10px;
     font-weight: 700;
@@ -137,7 +208,7 @@
 }
 
 .btn-shop:hover{
-    background-color: #000000a0;
+    background-color: #21231eaf;
     transform: scale(1.1);
 }
 
@@ -163,4 +234,31 @@
 .sec-2 img{
     width: 100%;
     height: auto;
+}
+
+@media (max-width: 820px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .sec-1 {
+        margin: 0 20px;
+    }
+
+    .sec-2 img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-theme p {
+        font-size: 36px;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
